@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FR/C477gSCDiGXTVZX35vtfUmtRIIWm0JdDcRkPQGyQ=",
+  "Hash": "BDHk08keZveUxrP/PHJv5ZfOwnyLPeUEDdazVoDvSvI=",
   "Source": "ProjectAPI",
   "BasePath": "_content/ProjectAPI",
   "Mode": "Default",
@@ -36,12 +36,12 @@
       "OriginalItemSpec": "wwwroot\\ProfilePhoto\\DSC_9008.jpg"
     },
     {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9044.jpg",
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9041.jpg",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
       "BasePath": "_content/ProjectAPI",
-      "RelativePath": "ProfilePhoto/DSC_9044.jpg",
+      "RelativePath": "ProfilePhoto/DSC_9041.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\DSC_9044.jpg"
+      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\DSC_9041.jpg"
     },
     {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9060.jpg",
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_0338.HEIC",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
       "BasePath": "_content/ProjectAPI",
-      "RelativePath": "ProfilePhoto/DSC_9060.jpg",
+      "RelativePath": "ProfilePhoto/IMG_0338.HEIC",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\DSC_9060.jpg"
+      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\IMG_0338.HEIC"
     },
     {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_0142.JPG",
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_20221010_102208_697.jpg",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
       "BasePath": "_content/ProjectAPI",
-      "RelativePath": "ProfilePhoto/IMG_0142.JPG",
+      "RelativePath": "ProfilePhoto/IMG_20221010_102208_697.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\IMG_0142.JPG"
+      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\IMG_20221010_102208_697.jpg"
     },
     {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_20210814_020923_681.jpg",
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
       "BasePath": "_content/ProjectAPI",
-      "RelativePath": "ProfilePhoto/IMG_20210814_020923_681.jpg",
+      "RelativePath": "TrackPhoto/4bc011b9161fb6544cfef43b0b5ee421.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\IMG_20210814_020923_681.jpg"
+      "OriginalItemSpec": "wwwroot\\TrackPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg"
     },
     {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\Screenshot 2025-02-06 212008.png",
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
       "BasePath": "_content/ProjectAPI",
-      "RelativePath": "ProfilePhoto/Screenshot 2025-02-06 212008.png",
+      "RelativePath": "TrackPhoto/69c3c85f8aca980abdcfb79fe815dfbb.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePhoto\\Screenshot 2025-02-06 212008.png"
+      "OriginalItemSpec": "wwwroot\\TrackPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png"
     }
   ]
 }

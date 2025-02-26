@@ -23,10 +23,15 @@ namespace Core.Interfaces
         Task<List<object>> FindAll(Expression<Func<T, bool>> predicate, Expression<Func<T, object>> Object);
         Task<List<object>> FindAll( Expression<Func<T, object>> Object);
         Task<List<T>> FindAll( Expression<Func<T, bool>> predicate);
+        Task<List<string>> FindAll(Expression<Func<T, bool>> predicate, Expression<Func<T, string>> Object);
 
         T Find(Expression<Func<T, bool>> predicate);
 
         Task<object> Mapping(Expression<Func<T, object>> Object);
+        Task<object> Find(Expression<Func<T, bool>> predicate, Expression<Func<T, object>> Object);
+
+        Task<bool> Any(Expression<Func<T, bool>> predicate);
+
 
 
     }

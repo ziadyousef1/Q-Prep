@@ -25,12 +25,14 @@ namespace Infrastructure.Authentication
 {
     public class Authentication : IAuthentication
     {
+        private readonly RoleManager<IdentityRole> roleManager;
         private readonly UserManager<AppUser> userManager;
 
         private readonly JwtSettings jwtSettings;
 
-        public Authentication(UserManager<AppUser> userManager, IOptions<JwtSettings> options)
+        public Authentication(RoleManager<IdentityRole> roleManager,UserManager<AppUser> userManager, IOptions<JwtSettings> options)
         {
+            this.roleManager = roleManager;
             this.userManager = userManager;
 
             jwtSettings = options.Value;
@@ -73,7 +75,7 @@ namespace Infrastructure.Authentication
 
         }
 
-        public async Task<AuthenticateDTO> RegisterAsync(RegisterDTO dto, string photo)
+        public async Task<AuthenticateDTO> RegisterAsync(RegisterDTO dto)
         {
             if (await userManager.FindByEmailAsync(dto.Email) != null)
                 return new AuthenticateDTO { Message = "Email Is  already Registed" };
@@ -83,7 +85,7 @@ namespace Infrastructure.Authentication
                 Email = dto.Email,
                 Name = dto.Name,
                 UserName = new MailAddress(dto.Email).User,
-                Photo = photo ?? "Photos/149071.png",
+                Photo = "Photos/149071.png",
             };
 
             var result = await userManager.CreateAsync(user, dto.Password + "Abcd123#");
@@ -98,6 +100,20 @@ namespace Infrastructure.Authentication
                 return new AuthenticateDTO { Message = errors };
 
             }
+            var Claim = new Claim("User", "User");
+            await userManager.AddClaimAsync(user, Claim);
+
+            var roleIsExists = await roleManager.RoleExistsAsync("User");
+            if (roleIsExists)
+            {
+                await userManager.AddToRoleAsync(user, "User");
+            }
+            else
+            {
+                await roleManager.CreateAsync(new IdentityRole("User"));
+                await userManager.AddToRoleAsync(user, "User");
+            }
+
             var jwtSecurtyToken = await CreateToken(user);
             return new AuthenticateDTO
             {
@@ -108,7 +124,6 @@ namespace Infrastructure.Authentication
                 Roles = new List<string> { "Users" },
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurtyToken),
                 Message = "This Email Is Created",
-                Photo = photo,
             };
 
 
@@ -158,14 +173,6 @@ namespace Infrastructure.Authentication
             return Authenticate;
 
         }
-
-
-
-
-
-
-
-
 
 
         public async Task<AuthenticateDTO> RefreshTokenAsync(string token)
@@ -228,6 +235,7 @@ namespace Infrastructure.Authentication
 
         }
 
+        
 
 
         private RefreshToken GenerateRefreshToken()
@@ -244,6 +252,33 @@ namespace Infrastructure.Authentication
                 CreateOn = DateTime.UtcNow,
 
             };
+        }
+
+
+        public async Task<string> AddRoleToUser(RoleToUserDTO dto)
+        {
+            var user = await userManager.FindByIdAsync(dto.UserId);
+            if (user == null)
+                return "Invalid User Id";
+            if (!await roleManager.RoleExistsAsync(dto.RoleName))
+                return "Invalid Role ";
+            if (await userManager.IsInRoleAsync(user, dto.RoleName))
+                return "User Already Assigned To This Role";
+            var result = await userManager.AddToRoleAsync(user, dto.RoleName);
+            if (result.Succeeded)
+                return string.Empty;
+            return "SomeThing went wrong";
+
+
+        }
+        public async Task<string> AddRole(RoleDTO dto)
+        {
+            if (await roleManager.RoleExistsAsync(dto.RoleName))
+                return "The Role Is Already Existing";
+
+            await roleManager.CreateAsync(new IdentityRole(dto.RoleName));
+
+            return string.Empty;
         }
 
     }

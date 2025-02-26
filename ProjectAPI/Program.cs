@@ -1,6 +1,7 @@
 
 using Core.Interfaces;
 using Core.Model;
+using Core.Servises;
 using Core.Settings;
 using Infrastructure;
 using Infrastructure.Authentication;
@@ -28,6 +29,9 @@ namespace ProjectAPI
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"),
                     options => options.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
             });
+
+            builder.Services.AddAuthorization(auth => auth.AddPolicy("AdminRole", p => p.RequireRole("Admin")));
+            builder.Services.AddAuthorization(auth => auth.AddPolicy("UserRole", p => p.RequireRole("User")));
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("jwt"));
 
             builder.Services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
@@ -37,7 +41,10 @@ namespace ProjectAPI
             builder.Services.AddIdentity<AppUser, IdentityRole>().
                 AddEntityFrameworkStores<AppDbContext>();
 
-            builder.Services.AddScoped<IAuthentication, Authentication>();
+            builder.Services.AddTransient<IAuthentication, Authentication>();
+            builder.Services.AddTransient<Service>();
+
+
 
 
             builder.Services.AddAuthentication(options =>
@@ -110,6 +117,7 @@ namespace ProjectAPI
 
             app.UseHttpsRedirection();
             app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

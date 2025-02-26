@@ -12,11 +12,12 @@ namespace Core.Interfaces
 {
     public interface IAuthentication
     {
-        Task<AuthenticateDTO> RegisterAsync(RegisterDTO dto ,  string photo);
+        Task<AuthenticateDTO> RegisterAsync(RegisterDTO dto );
         Task<AuthenticateDTO> LoginAsync(LogInDTo dto );
         Task<AuthenticateDTO> RefreshTokenAsync(string token);
         Task<bool> RevokeTokenAsync(string token);
-
+        Task<string> AddRoleToUser(RoleToUserDTO dto);
+        Task<string> AddRole(RoleDTO dto);
 
     }
 }

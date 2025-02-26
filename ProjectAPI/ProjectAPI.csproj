@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\" />
+    <Folder Include="wwwroot\FrameworkPhoto\" />
+    <Folder Include="wwwroot\TrackPhoto\" />
     <Folder Include="wwwroot\ProfilePhoto\" />
   </ItemGroup>
 

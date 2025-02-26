@@ -2,6 +2,7 @@
 using Core.Interfaces;
 using Core.Model;
 using Core.Settings;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -42,20 +43,13 @@ namespace ProjectAPI.Controllers
 
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register([FromForm] RegisterDTO dto)
+        public async Task<IActionResult> Register( RegisterDTO dto)
         {
             var errors = ModelState.Values.SelectMany(x => x.Errors);
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-          
-            if (dto.Photo != null)
-            {
-                string uploads = Path.Combine(hosting.WebRootPath, @"ProfilePhoto/");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-               
-            }
-            var result = await authentication.RegisterAsync(dto, dto.Photo.FileName);
+
+            var result = await authentication.RegisterAsync(dto);
 
             if(!result.IsAuthenticated)
                 return BadRequest(result.Message);
@@ -67,7 +61,7 @@ namespace ProjectAPI.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromForm]LogInDTo dto)
+        public async Task<IActionResult> Login(LogInDTo dto)
         {
             var errors = ModelState.Values.SelectMany(x => x.Errors);
             if (!ModelState.IsValid)
@@ -84,8 +78,9 @@ namespace ProjectAPI.Controllers
             return Ok(result);
 
         }
+
         [HttpPost("ForgetPassword")]
-        public async Task<IActionResult> ForgetPassword([FromForm] ForgetPasswordDTO dto)
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordDTO dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -100,7 +95,8 @@ namespace ProjectAPI.Controllers
         }
 
 
-        [HttpPost("ChangePassword")]
+        [HttpPost("ChangePassword/{id}")]
+        [Authorize(Roles = "User")]
 
         public async Task<IActionResult> ChangePassword([FromForm] BasePasswordDTO dto , string id)
         {
@@ -158,7 +154,6 @@ namespace ProjectAPI.Controllers
 
             return Ok(result);
         }
-
 
 
 

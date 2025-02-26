@@ -22,6 +22,28 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Core.Model.AdvancedLevel", b =>
+                {
+                    b.Property<string>("QuestionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Answers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FrameworkId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Questions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QuestionId");
+
+                    b.HasIndex("FrameworkId");
+
+                    b.ToTable("AdvancedLevel");
+                });
+
             modelBuilder.Entity("Core.Model.AppUser", b =>
                 {
                     b.Property<string>("Id")
@@ -29,6 +51,12 @@ namespace Infrastructure.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BirthDay")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -40,6 +68,9 @@ namespace Infrastructure.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -93,6 +124,231 @@ namespace Infrastructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("UsersAccount", "security");
+                });
+
+            modelBuilder.Entity("Core.Model.BeginnerLevel", b =>
+                {
+                    b.Property<string>("QuestionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Answers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FrameworkId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Questions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QuestionId");
+
+                    b.HasIndex("FrameworkId");
+
+                    b.ToTable("BeginnerLevel");
+                });
+
+            modelBuilder.Entity("Core.Model.FeedBack", b =>
+                {
+                    b.Property<string>("FeedbackId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FeedbackId");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("FeedBack");
+                });
+
+            modelBuilder.Entity("Core.Model.Frameworks", b =>
+                {
+                    b.Property<string>("FrameworkId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FrameworkName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MainTrackId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FrameworkId");
+
+                    b.HasIndex("MainTrackId");
+
+                    b.ToTable("Framworks");
+                });
+
+            modelBuilder.Entity("Core.Model.IntermediateLevel", b =>
+                {
+                    b.Property<string>("QuestionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Answers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FrameworkId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Questions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QuestionId");
+
+                    b.HasIndex("FrameworkId");
+
+                    b.ToTable("IntermediateLevel");
+                });
+
+            modelBuilder.Entity("Core.Model.MainTrack", b =>
+                {
+                    b.Property<string>("TrackId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TarckName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TrackId");
+
+                    b.ToTable("MainTrack");
+                });
+
+            modelBuilder.Entity("Core.Model.Recent", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MainTrackId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainTrackId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Recent");
+                });
+
+            modelBuilder.Entity("Core.Model.RequestQuestions", b =>
+                {
+                    b.Property<string>("RequestId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Answers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DateRequest")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FrameworkName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MainTrackId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("RequestId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RequestQuestions");
+                });
+
+            modelBuilder.Entity("Core.Model.SaveQuestions", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Question")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("SaveQuestions");
+                });
+
+            modelBuilder.Entity("Core.Model.Test", b =>
+                {
+                    b.Property<string>("Q_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("A_1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CorrectAnswers")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FrameworkId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Qeuestion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Q_Id");
+
+                    b.ToTable("Test");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -228,6 +484,17 @@ namespace Infrastructure.Migrations
                     b.ToTable("UserToken", "security");
                 });
 
+            modelBuilder.Entity("Core.Model.AdvancedLevel", b =>
+                {
+                    b.HasOne("Core.Model.Frameworks", "Frameworks")
+                        .WithMany()
+                        .HasForeignKey("FrameworkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Frameworks");
+                });
+
             modelBuilder.Entity("Core.Model.AppUser", b =>
                 {
                     b.OwnsMany("Core.Model.RefreshToken", "RefreshTokens", b1 =>
@@ -263,6 +530,87 @@ namespace Infrastructure.Migrations
                         });
 
                     b.Navigation("RefreshTokens");
+                });
+
+            modelBuilder.Entity("Core.Model.BeginnerLevel", b =>
+                {
+                    b.HasOne("Core.Model.Frameworks", "Frameworks")
+                        .WithMany()
+                        .HasForeignKey("FrameworkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Frameworks");
+                });
+
+            modelBuilder.Entity("Core.Model.FeedBack", b =>
+                {
+                    b.HasOne("Core.Model.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Core.Model.Frameworks", b =>
+                {
+                    b.HasOne("Core.Model.MainTrack", "MainTrack")
+                        .WithMany()
+                        .HasForeignKey("MainTrackId");
+
+                    b.Navigation("MainTrack");
+                });
+
+            modelBuilder.Entity("Core.Model.IntermediateLevel", b =>
+                {
+                    b.HasOne("Core.Model.Frameworks", "Frameworks")
+                        .WithMany()
+                        .HasForeignKey("FrameworkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Frameworks");
+                });
+
+            modelBuilder.Entity("Core.Model.Recent", b =>
+                {
+                    b.HasOne("Core.Model.MainTrack", "MainTrack")
+                        .WithMany()
+                        .HasForeignKey("MainTrackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Model.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MainTrack");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Core.Model.RequestQuestions", b =>
+                {
+                    b.HasOne("Core.Model.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Core.Model.SaveQuestions", b =>
+                {
+                    b.HasOne("Core.Model.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -31,5 +31,19 @@ namespace Infrastructure
             builder.Entity<IdentityUserToken<string>>().ToTable("UserToken", "security");
         }
 
+
+        public DbSet<AdvancedLevel> AdvancedLevel { get; set; } 
+        public DbSet<IntermediateLevel> IntermediateLevel { get; set; } 
+        public DbSet<BeginnerLevel> BeginnerLevel { get; set; } 
+        public DbSet<Frameworks> Framworks { get; set; } 
+        public DbSet<MainTrack> MainTrack { get; set; }
+        public DbSet<RequestQuestions> RequestQuestions { get; set; }
+        public DbSet<Test> Test { get; set; }
+        public DbSet<SaveQuestions> SaveQuestions { get; set; }
+        public DbSet<FeedBack> FeedBack { get; set; }
+        public DbSet<Recent> Recent { get; set; }
+
+
+
     }
 }

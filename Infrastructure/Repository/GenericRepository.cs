@@ -55,9 +55,27 @@ namespace Infrastructure.Repository
             return query;
         }
 
+        public async Task<object> Find( Expression<Func<T, bool>> predicate,Expression<Func<T, object>> Object )
+        {
+            var query = await _dbSet.Where(predicate).Select(Object).FirstOrDefaultAsync();
+            return query;
+        }
+
+        public async Task<bool> Any(Expression<Func<T, bool>> predicate)
+        {
+            var query = await _dbSet.AnyAsync(predicate);
+            return query;
+        }
+
+
         public async Task<List<object>> FindAll( Expression<Func<T, object>> Object)
         {
             var query = await _dbSet.Select(Object).ToListAsync();
+            return query;
+        }
+        public async Task<List<string>> FindAll(Expression<Func<T, bool>> predicate, Expression<Func<T, string>> Object)
+        {
+            var query = await _dbSet.Where(predicate).Select(Object).ToListAsync();
             return query;
         }
 

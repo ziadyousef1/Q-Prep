@@ -19,6 +19,10 @@ namespace Core.Model
         [ForeignKey("TypeJopId")]
         public string? Photo { get; set; }
 
+        public string? Address { get; set; }
+        public string? BirthDay { get; set; }
+        public string? Location { get; set; }
+
 
         public List<RefreshToken> RefreshTokens { get; set; }
     }

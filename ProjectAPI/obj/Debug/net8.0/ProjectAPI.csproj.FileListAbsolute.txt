@@ -126,7 +126,6 @@ D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.GeneratedMSBuild
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.AssemblyInfoInputs.cache
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.AssemblyInfo.cs
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.csproj.CoreCompileInputs.cache
-D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\staticwebassets.build.json
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\staticwebassets.development.json
@@ -142,3 +141,5 @@ D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\refint\ProjectAPI.dll
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.pdb
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.genruntimeconfig.cache
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ref\ProjectAPI.dll
+D:\Projects Of C#\Q-Prep\ProjectAPi\obj\Debug\net8.0\ProjectAPI.sourcelink.json
+D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.MvcApplicationPartsAssemblyInfo.cs
