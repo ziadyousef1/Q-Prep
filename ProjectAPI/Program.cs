@@ -26,7 +26,7 @@ namespace ProjectAPI
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"),
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ProdcutionConnection"),
                     options => options.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
             });
 
