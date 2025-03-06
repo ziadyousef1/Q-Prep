@@ -23,14 +23,14 @@ namespace ProjectAPI.Controllers
         }
 
 
-        [HttpGet("GetFramework")]
-        public async Task<IActionResult> GetFramework(string maiTrackId)
+        [HttpGet("GetFramework/{mainTrackId}")]
+        public async Task<IActionResult> GetFramework(string mainTrackId)
         {
-            var track = await mainTrackUnitOfWork.Entity.GetAsync(maiTrackId);
+            var track = await mainTrackUnitOfWork.Entity.GetAsync(mainTrackId);
             if (track == null) 
                 return NotFound("This track Not Found");
 
-            var frameworks = await frameworksUnitOfWork.Entity.FindAll(x=>x.MainTrackId == maiTrackId);
+            var frameworks = await frameworksUnitOfWork.Entity.FindAll(x=>x.MainTrackId == mainTrackId);
 
             if (frameworks.Count == 0)
                 return NotFound("This Track Hasn't Any Framwork!");
@@ -80,9 +80,9 @@ namespace ProjectAPI.Controllers
 
         [HttpPut("UpdateFramewrok/{framworkId}")]
         [Authorize("AdminRole")]
-        public async Task<IActionResult> UpdateFramewrok(string framworkId , UpdateFramewordDTO dto)
+        public async Task<IActionResult> UpdateFramewrok(string frameworkId , UpdateFramewordDTO dto)
         {
-            var framework = await frameworksUnitOfWork.Entity.GetAsync(framworkId);
+            var framework = await frameworksUnitOfWork.Entity.GetAsync(frameworkId);
 
             if (framework == null)
                 return NotFound("This Framwork Not Found");

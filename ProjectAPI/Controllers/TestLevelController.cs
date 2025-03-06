@@ -30,7 +30,7 @@ namespace ProjectAPI.Controllers
         }
 
         [HttpGet("QuestionForTesting/{framework}")]
-        //[Authorize("UserRole")]
+        [Authorize("UserRole")]
         public async Task<IActionResult> GetQuestionForTesting(string framework)
         {
             var list = await service.RendomQuestions(framework);
