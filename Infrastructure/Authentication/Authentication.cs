@@ -85,7 +85,7 @@ namespace Infrastructure.Authentication
                 Email = dto.Email,
                 Name = dto.Name,
                 UserName = new MailAddress(dto.Email).User,
-                Photo = "Photos/149071.png",
+                Photo = "user-blue-gradient_78370-4692.jpg",
             };
 
             var result = await userManager.CreateAsync(user, dto.Password + "Abcd123#");
