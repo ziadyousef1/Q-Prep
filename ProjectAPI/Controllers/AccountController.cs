@@ -74,7 +74,7 @@ namespace ProjectAPI.Controllers
         }
 
         [HttpPut("EditUser")]
-        public async Task<IActionResult> UpdateUser(UpdateUserDTO dto)
+        public async Task<IActionResult> UpdateUser([FromForm] UpdateUserDTO dto)
         {
             var user = await userManager.GetUserAsync(User);
             if (user == null)
