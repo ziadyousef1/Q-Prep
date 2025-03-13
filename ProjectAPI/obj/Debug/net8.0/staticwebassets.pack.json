@@ -1,20 +1,12 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9008.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\DSC_9008.jpg"
+      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg",
+      "PackagePath": "staticwebassets\\ProfilePhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg"
     },
     {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9041.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\DSC_9041.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_0338.HEIC",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\IMG_0338.HEIC"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_20221010_102208_697.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\IMG_20221010_102208_697.jpg"
+      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg",
+      "PackagePath": "staticwebassets\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg"
     },
     {
       "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
