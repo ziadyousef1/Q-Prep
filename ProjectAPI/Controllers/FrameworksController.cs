@@ -54,7 +54,7 @@ namespace ProjectAPI.Controllers
             string photo = "69c3c85f8aca980abdcfb79fe815dfbb.png";
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto/");
+                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto\");
                 string fullPath = Path.Combine(uploads, dto.Photo.FileName);
                 dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
                 photo = dto.Photo.FileName;
@@ -89,7 +89,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto/");
+                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto\");
                 string fullPath = Path.Combine(uploads, dto.Photo.FileName);
                 dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
                 framework.Photo = dto.Photo.FileName;
