@@ -28,7 +28,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\FrameworkPhoto\" />
     <Folder Include="wwwroot\TrackPhoto\" />
-    <Folder Include="wwwroot\ProfilePhoto\" />
   </ItemGroup>
 
 </Project>
