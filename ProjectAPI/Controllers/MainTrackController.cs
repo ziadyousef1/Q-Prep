@@ -41,7 +41,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto\");
+                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto");
                 string fullPath = Path.Combine(uploads, dto.Photo.FileName);
                 dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
                 UrlPhoto = dto.Photo.FileName;
