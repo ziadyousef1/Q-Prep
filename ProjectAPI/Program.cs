@@ -107,12 +107,9 @@ namespace ProjectAPI
             });
 
             var app = builder.Build();
-
-          
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            
-
+            app.UseStaticFiles();
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseHttpsRedirection();
             app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseAuthentication();
