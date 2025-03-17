@@ -78,7 +78,7 @@ namespace ProjectAPI.Controllers
 
         }
 
-        [HttpPut("UpdateFramewrok/{framworkId}")]
+        [HttpPut("UpdateFramewrok/{frameworkId}")]
         [Authorize("AdminRole")]
         public async Task<IActionResult> UpdateFramewrok(string frameworkId , UpdateFramewordDTO dto)
         {
@@ -89,7 +89,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto\");
+                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto");
                 string fullPath = Path.Combine(uploads, dto.Photo.FileName);
                 dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
                 framework.Photo = dto.Photo.FileName;
@@ -116,6 +116,7 @@ namespace ProjectAPI.Controllers
                 return NotFound("This Framework Not Found");
 
              frameworksUnitOfWork.Entity.Delete(framework);
+            frameworksUnitOfWork.Save();
 
             return Ok("The Framework Is Deleted");
 

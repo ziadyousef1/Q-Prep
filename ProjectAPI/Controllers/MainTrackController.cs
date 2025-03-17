@@ -79,7 +79,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto\");
+                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto");
                 string fullPath = Path.Combine(uploads, dto.Photo.FileName);
                 dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
                 track.Photo = dto.Photo.FileName;
@@ -95,7 +95,7 @@ namespace ProjectAPI.Controllers
             return Ok(track);
 
         }
-        [HttpDelete("DeleteTrack{trackID}")]
+        [HttpDelete("DeleteTrack/{trackID}")]
         [Authorize("AdminRole")]
         public async Task<IActionResult> DeleteTrack(string trackID)
         {
@@ -105,6 +105,7 @@ namespace ProjectAPI.Controllers
                 return NotFound("This Track Not Found");
 
             mainTrackUnitOfWork.Entity.Delete(track);
+            mainTrackUnitOfWork.Save();
             return Ok(track);
 
         }
