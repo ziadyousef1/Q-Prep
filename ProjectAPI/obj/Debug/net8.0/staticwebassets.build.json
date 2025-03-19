@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VApcMbk0czv8K9Igy4YE6eTrRIMx0hkZqhMaXBlQDqY=",
+  "Hash": "s7UN4NAXz6wb/YdpYca9dmjaIcjZDnmL+kFUgS6o+QA=",
   "Source": "ProjectAPI",
   "BasePath": "_content/ProjectAPI",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\FrameworkPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
+      "SourceId": "ProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
+      "BasePath": "_content/ProjectAPI",
+      "RelativePath": "FrameworkPhoto/4bc011b9161fb6544cfef43b0b5ee421.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FrameworkPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg"
+    },
+    {
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\FrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg",
+      "SourceId": "ProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
+      "BasePath": "_content/ProjectAPI",
+      "RelativePath": "FrameworkPhoto/dark-landscape-mist-moon-wallpaper-preview.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg"
+    },
     {
       "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg",
       "SourceId": "ProjectAPI",

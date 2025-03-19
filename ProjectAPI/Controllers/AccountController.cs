@@ -67,10 +67,7 @@ namespace ProjectAPI.Controllers
                 UrlPhoto = user.Photo,
 
             };
-
             return Ok(mapUser);
-
-
         }
 
         [HttpPut("EditUser")]

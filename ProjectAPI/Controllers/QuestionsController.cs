@@ -114,7 +114,7 @@ namespace ProjectAPI.Controllers
                 };
                 await beginnerUnitOfWork.Entity.AddAsync(Question);
             }
-            else if (level.Contains("intermediate"))
+            else if (level.Contains("Intermediate"))
             {
                 var Question = new IntermediateLevel
                 {
@@ -154,8 +154,9 @@ namespace ProjectAPI.Controllers
         }
 
 
-        [HttpPost("AddAddQuestionFromAdmin/{level}")]
-        public async Task<IActionResult> AddAddQuestionFromAdmin(AddQuestionsDTO dto,string level)
+        [HttpPost("AddQuestionFromAdmin/{level}")]
+        [Authorize("AdminRole")]
+        public async Task<IActionResult> AddQuestionFromAdmin(AddQuestionsDTO dto,string level)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

@@ -14,7 +14,6 @@ namespace Core.Model
         [Key]
         public string RequestId { get; set; }
 
-        public string MainTrackId { get; set; }
         [ForeignKey("UserId")]
         public string UserId { get; set; }
 

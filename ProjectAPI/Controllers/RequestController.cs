@@ -50,7 +50,6 @@ namespace ProjectAPI.Controllers
                 Email = userManager.Users.Where(i=>i.Id == x.UserId).Select(x => x.Email).FirstOrDefault() ?? "",
                 UserName = userManager.Users.Where(i => i.Id == x.UserId).Select(x => x.UserName).FirstOrDefault() ?? "",
                 Photo = userManager.Users.Where(i => i.Id == x.UserId).Select(x => x.Photo).FirstOrDefault() ?? "",
-                MainTrack = mainTrackUnitOfWork.Entity.Find(t => t.TrackId == x.MainTrackId).TarckName ?? ""
             });
 
 
@@ -67,25 +66,17 @@ namespace ProjectAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var userid = userManager.GetUserId(HttpContext.User);
-
-            var user = await userManager.FindByIdAsync(userid);
+            var user = await userManager.GetUserAsync(User);
 
             if (user == null)
-                return BadRequest("This User Not Found");
-            var Main = mainTrackUnitOfWork.Entity.Find(x => x.TarckName==dto.MainTrackName);
-
-            if (Main == null)
-                return BadRequest("This Tarck Not Found");
-
+                return NotFound("This user Not Found");
 
             var Question = new RequestQuestions
             {
                 RequestId = Guid.NewGuid().ToString(),
-                UserId = userid,
+                UserId = user.Id,
                 Answers = dto.Answers,
                 FrameworkName = dto.FrameworkName,
-                MainTrackId = Main.TrackId,
                 Questions = dto.Questions,
                 DateRequest = DateTime.Now,
             };
