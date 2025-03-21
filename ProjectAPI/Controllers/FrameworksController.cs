@@ -60,7 +60,7 @@ namespace ProjectAPI.Controllers
                 photo = compressedImage;
             }
 
-            var framwork = new Frameworks
+            var framework = new Frameworks
             {
                 FrameworkId = Guid.NewGuid().ToString(),
                 FrameworkName = dto.FramworkName,
@@ -69,10 +69,10 @@ namespace ProjectAPI.Controllers
                 Photo = photo,
             };
 
-            await frameworksUnitOfWork.Entity.AddAsync(framwork);
+            await frameworksUnitOfWork.Entity.AddAsync(framework);
             frameworksUnitOfWork.Save();
 
-            return Ok(framwork);
+            return Ok(framework);
 
 
 
