@@ -27,8 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\FrameworkPhoto\" />
-    <Folder Include="wwwroot\TrackPhoto\" />
+    <Folder Include="wwwroot\TrackandFrameworkPhoto\" />
   </ItemGroup>
 
 </Project>

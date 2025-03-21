@@ -56,7 +56,7 @@ namespace ProjectAPI.Controllers
             string photo = "69c3c85f8aca980abdcfb79fe815dfbb.png";
             if (dto.Photo != null)
             {
-                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "FrameworkPhoto", 800, 50);
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackandFrameworkPhoto", 800, 50);
                 photo = compressedImage;
             }
 
