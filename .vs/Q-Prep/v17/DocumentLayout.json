@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "D:\\Projects Of C#\\Q-Prep\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|d:\\projects of c#\\q-prep\\infrastructure\\authentication\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\authentication\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\controllers\\maintrackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\maintrackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\controllers\\frameworkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\frameworkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\controllers\\testlevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\testlevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|d:\\projects of c#\\q-prep\\infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\servises\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\servises\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2023408-F4ED-4509-BA0B-D4E493DFAE8C}|Core\\Core.csproj|d:\\projects of c#\\q-prep\\core\\model\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2023408-F4ED-4509-BA0B-D4E493DFAE8C}|Core\\Core.csproj|solutionrelative:core\\model\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\controllers\\savecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\savecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|d:\\projects of c#\\q-prep\\projectapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0EFFB625-A560-4E37-8154-6F749F562804}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|d:\\projects of c#\\q-prep\\infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89039A2D-A0ED-4192-9BD1-FD3B987D4196}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainTrackController.cs",
+              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\MainTrackController.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\MainTrackController.cs",
+              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\MainTrackController.cs",
+              "RelativeToolTip": "ProjectAPI\\Controllers\\MainTrackController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAzwCwAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T12:10:24.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,101 +61,58 @@
               "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\FrameworksController.cs",
               "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\FrameworksController.cs",
               "RelativeToolTip": "ProjectAPI\\Controllers\\FrameworksController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB4AAAA4AAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwBwAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T20:01:43.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Authentication.cs",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\Infrastructure\\Authentication\\Authentication.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Authentication\\Authentication.cs",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\Infrastructure\\Authentication\\Authentication.cs",
-              "RelativeToolTip": "Infrastructure\\Authentication\\Authentication.cs",
-              "ViewState": "AQIAAMQAAAAAAAAAAAAcwFoAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T19:54:33.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ProjectAPI\\appsettings.json",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\appsettings.json",
-              "RelativeToolTip": "ProjectAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-06T19:41:23.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\Core\\Model\\AppUser.cs",
-              "RelativeDocumentMoniker": "Core\\Model\\AppUser.cs",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\Core\\Model\\AppUser.cs",
-              "RelativeToolTip": "Core\\Model\\AppUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T20:36:20.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ProjectAPI\\Program.cs",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Program.cs",
-              "RelativeToolTip": "ProjectAPI\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T20:17:36.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Service.cs",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Servises\\Service.cs",
-              "RelativeDocumentMoniker": "ProjectAPI\\Servises\\Service.cs",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Servises\\Service.cs",
-              "RelativeToolTip": "ProjectAPI\\Servises\\Service.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAIwBsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:13:14.72Z",
+              "WhenOpened": "2025-03-21T11:52:44.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ProjectAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:51:50.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.cs",
+              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Servises\\Service.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Servises\\Service.cs",
+              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Servises\\Service.cs",
+              "RelativeToolTip": "ProjectAPI\\Servises\\Service.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:51:12.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\Infrastructure\\Repository\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repository\\GenericRepository.cs",
               "ToolTip": "D:\\Projects Of C#\\Q-Prep\\Infrastructure\\Repository\\GenericRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repository\\GenericRepository.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAA6wE0AAAA0AAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAA6wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:12:40.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T00:44:25.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestLevelController.cs",
-              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\TestLevelController.cs",
-              "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\TestLevelController.cs",
-              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\TestLevelController.cs",
-              "RelativeToolTip": "ProjectAPI\\Controllers\\TestLevelController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwDwAAAAbAAAA",
+              "DocumentIndex": 4,
+              "Title": "SaveController.cs",
+              "DocumentMoniker": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\SaveController.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\SaveController.cs",
+              "ToolTip": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\Controllers\\SaveController.cs",
+              "RelativeToolTip": "ProjectAPI\\Controllers\\SaveController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAwDoAAACPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:09:27.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T00:37:53.308Z"
             }
           ]
         }
