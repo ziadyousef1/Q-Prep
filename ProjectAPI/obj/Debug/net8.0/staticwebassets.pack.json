@@ -1,60 +1,8 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\FrameworkPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
-      "PackagePath": "staticwebassets\\FrameworkPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\FrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg",
-      "PackagePath": "staticwebassets\\FrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\12d43941a46441cd9780936d1f0fee11.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\12d43941a46441cd9780936d1f0fee11.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9008.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\DSC_9008.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9018.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\DSC_9018.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\DSC_9044.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\DSC_9044.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\IMG_0136.JPG",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\IMG_0136.JPG"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\fd4fc80f-512a-4803-ac03-6002cfa60036.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\fd4fc80f-512a-4803-ac03-6002cfa60036.jpg"
-    },
-    {
       "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg",
       "PackagePath": "staticwebassets\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\ProfilePhoto\\٢٠٢٠٠٦٢٧_١٥٤٢٢٤.jpg",
-      "PackagePath": "staticwebassets\\ProfilePhoto\\٢٠٢٠٠٦٢٧_١٥٤٢٢٤.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
-      "PackagePath": "staticwebassets\\TrackPhoto\\4bc011b9161fb6544cfef43b0b5ee421.jpg"
-    },
-    {
-      "Id": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png",
-      "PackagePath": "staticwebassets\\TrackPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectAPI.Microsoft.AspNetCore.StaticWebAssets.props",
