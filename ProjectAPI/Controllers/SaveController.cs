@@ -56,6 +56,9 @@ namespace ProjectAPI.Controllers
             if (user == null)
                 return NotFound();
 
+            var valid =await saveQuestionUnitOfWork.Entity.Any(x=>x.UserId == user.Id && dto.Question == x.Question && x.Answer == dto.Answer);
+            if (valid)
+                return Ok("The Question is already existing ");
             var Save = new SaveQuestions
             {
                 Id = Guid.NewGuid().ToString(),

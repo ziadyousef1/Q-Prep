@@ -1,11 +1,17 @@
 ﻿using Core.Interfaces;
 using Core.Model;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProjectAPI.DTO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Processing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+//using static System.Net.Mime.MediaTypeNames;
 
 namespace Core.Servises
 {
@@ -14,13 +20,14 @@ namespace Core.Servises
         private readonly IUnitOfWork<Test> testUnitOfWork;
         private readonly IUnitOfWork<Frameworks> frameworksUnitOfWork;
         private readonly IUnitOfWork<MainTrack> mainTrackUnitOfWork;
-        public Service(IUnitOfWork<Test> TestUnitOfWork, IUnitOfWork<Frameworks> FrameworksUnitOfWork, IUnitOfWork<MainTrack> mainTrackUnitOfWork)
+        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting;
+
+        public Service(IUnitOfWork<Test> TestUnitOfWork, IUnitOfWork<Frameworks> FrameworksUnitOfWork, IUnitOfWork<MainTrack> mainTrackUnitOfWork , Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting)
         {
             testUnitOfWork = TestUnitOfWork;
             frameworksUnitOfWork = FrameworksUnitOfWork;
             this.mainTrackUnitOfWork = mainTrackUnitOfWork;
-
-
+            this.hosting = hosting;
         }
 
 
@@ -51,12 +58,28 @@ namespace Core.Servises
                 }
 
             }
-
             return list;
 
         }
+        public async Task<string> CompressAndSaveImageAsync(IFormFile file , string directory , int width = 800, int quality = 50)
+        {
+            string uploads = Path.Combine(hosting.WebRootPath, $@"{directory}");
+            string filePath = Path.Combine(uploads, file.FileName);
+            using (var image = await Image.LoadAsync(file.OpenReadStream()))
+            {
+                // ضغط الصورة
+                image.Mutate(x => x.Resize(new ResizeOptions
+                {
+                    Mode = ResizeMode.Max,
+                    Size = new Size(width, 0) 
+                }));
 
+                using var outputStream = new FileStream(filePath, FileMode.Create);
+                await image.SaveAsync(outputStream, new JpegEncoder { Quality = quality });
+            }
 
+            return file.FileName;
+        }
         public async Task<bool> ComparerAnswer(string questionId, string selectedAnwser)
         {
             var question = await testUnitOfWork.Entity.GetAsync(questionId);

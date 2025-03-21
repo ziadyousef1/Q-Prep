@@ -1,5 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Model;
+using Core.Servises;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,15 +12,16 @@ namespace ProjectAPI.Controllers
     [ApiController]
     public class FrameworksController : ControllerBase
     {
+        private readonly Service service;
         private readonly IUnitOfWork<Frameworks> frameworksUnitOfWork;
         private readonly IUnitOfWork<MainTrack> mainTrackUnitOfWork;
-        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting;
 
-        public FrameworksController(IUnitOfWork<Frameworks> FrameworksUnitOfWork ,IUnitOfWork<MainTrack> mainTrackUnitOfWork , Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting)
+        public FrameworksController(Service service, IUnitOfWork<Frameworks> FrameworksUnitOfWork ,IUnitOfWork<MainTrack> mainTrackUnitOfWork )
         {
+            this.service = service;
             frameworksUnitOfWork = FrameworksUnitOfWork;
             this.mainTrackUnitOfWork = mainTrackUnitOfWork;
-            this.hosting = hosting;
+
         }
 
 
@@ -54,10 +56,8 @@ namespace ProjectAPI.Controllers
             string photo = "69c3c85f8aca980abdcfb79fe815dfbb.png";
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-                photo = dto.Photo.FileName;
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "FrameworkPhoto", 800, 50);
+                photo = compressedImage;
             }
 
             var framwork = new Frameworks
@@ -89,10 +89,8 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"FrameworkPhoto");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-                framework.Photo = dto.Photo.FileName;
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "FrameworkPhoto", 800, 50);
+                framework.Photo = compressedImage;
             }
             framework.description = dto.description ?? framework.description;
             framework.FrameworkName = dto.FrameworkName ?? framework.FrameworkName;
