@@ -38,6 +38,11 @@ namespace ProjectAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+
+            var vaild = await mainTrackUnitOfWork.Entity.Any(x => x.TarckName == dto.TarckName);
+            if (vaild)
+                return BadRequest("This Framework is already existing");
+
             var UrlPhoto = "69c3c85f8aca980abdcfb79fe815dfbb.png";
 
             if (dto.Photo != null)
@@ -78,7 +83,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackPhoto", 800, 50);
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackandFrameworkPhoto", 800, 50);
                 track.Photo = compressedImage;
             }
 

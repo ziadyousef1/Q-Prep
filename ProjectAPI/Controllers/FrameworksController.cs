@@ -52,6 +52,10 @@ namespace ProjectAPI.Controllers
             if (track == null) 
                 return NotFound("This track Not Found");
 
+            var vaild = await frameworksUnitOfWork.Entity.Any(x => x.FrameworkName == dto.FramworkName);
+            if (vaild)
+                return BadRequest("This Framework is already existing");
+
 
             string photo = "69c3c85f8aca980abdcfb79fe815dfbb.png";
             if (dto.Photo != null)
@@ -87,9 +91,12 @@ namespace ProjectAPI.Controllers
             if (framework == null)
                 return NotFound("This Framwork Not Found");
 
+            if (dto.FrameworkName == framework.FrameworkName)
+                return BadRequest("This FrameworkName Is already Exist");
+
             if (dto.Photo != null)
             {
-                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "FrameworkPhoto", 800, 50);
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackandFrameworkPhoto", 800, 50);
                 framework.Photo = compressedImage;
             }
             framework.description = dto.description ?? framework.description;
