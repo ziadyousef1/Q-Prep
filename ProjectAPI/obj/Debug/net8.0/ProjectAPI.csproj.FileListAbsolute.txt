@@ -143,3 +143,4 @@ D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.genruntimeconfig
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ref\ProjectAPI.dll
 D:\Projects Of C#\Q-Prep\ProjectAPi\obj\Debug\net8.0\ProjectAPI.sourcelink.json
 D:\Projects Of C#\Q-Prep\ProjectAPI\obj\Debug\net8.0\ProjectAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects Of C#\Q-Prep\ProjectAPI\bin\Debug\net8.0\SixLabors.ImageSharp.dll

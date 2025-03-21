@@ -1,5 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Model;
+using Core.Servises;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,13 +12,13 @@ namespace ProjectAPI.Controllers
     [ApiController]
     public class MainTrackController : ControllerBase
     {
+        private readonly Service service;
         private readonly IUnitOfWork<MainTrack> mainTrackUnitOfWork;
-        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting;
 
-        public MainTrackController(IUnitOfWork<MainTrack> mainTrackUnitOfWork, Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting)
+        public MainTrackController(Service service, IUnitOfWork<MainTrack> mainTrackUnitOfWork)
         {
+            this.service = service;
             this.mainTrackUnitOfWork = mainTrackUnitOfWork;
-            this.hosting = hosting;
         }
 
 
@@ -41,10 +42,8 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-                UrlPhoto = dto.Photo.FileName;
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo,"TrackPhoto", 800, 50);
+                UrlPhoto = compressedImage;
             }
 
             var track = new MainTrack
@@ -79,10 +78,8 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"TrackPhoto");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-                track.Photo = dto.Photo.FileName;
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackPhoto", 800, 50);
+                track.Photo = compressedImage;
             }
 
             track.TarckName = dto.TarckName ?? track.TarckName;

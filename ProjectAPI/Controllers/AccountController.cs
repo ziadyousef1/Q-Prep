@@ -1,4 +1,5 @@
 ﻿using Core.Model;
+using Core.Servises;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -14,13 +15,14 @@ namespace ProjectAPI.Controllers
     [Authorize("UserRole")]
     public class AccountController : ControllerBase
     {
+        private readonly Service service;
         private readonly UserManager<AppUser> userManager;
-        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting;
 
-        public AccountController(UserManager<AppUser> userManager , Microsoft.AspNetCore.Hosting.IHostingEnvironment hosting)
+        public AccountController(Service service, UserManager<AppUser> userManager )
         {
+            this.service = service;
             this.userManager = userManager;
-            this.hosting = hosting;
+
         }
 
 
@@ -55,6 +57,8 @@ namespace ProjectAPI.Controllers
             if (user == null)
                 return NotFound("This User Not Registed");
 
+            //long compressedSize = new FileInfo($"wwwroot/ProfilePhoto/{user.Photo}").Length;
+
             var mapUser = new GetUsersDTO
             {
                 Address = user.Address,
@@ -77,12 +81,13 @@ namespace ProjectAPI.Controllers
             if (user == null)
                 return NotFound("This User Not Registed");
 
+
+            //long originalSize = dto.Photo.Length;
+
             if (dto.Photo != null)
             {
-                string uploads = Path.Combine(hosting.WebRootPath, @"ProfilePhoto");
-                string fullPath = Path.Combine(uploads, dto.Photo.FileName);
-                dto.Photo.CopyTo(new FileStream(fullPath, FileMode.Create));
-                user.Photo = dto.Photo.FileName;
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "ProfilePhoto", 800, 50);
+                user.Photo = compressedImage;
             }
             user.Address = dto.Address ?? user.Address;
             user.BirthDay = dto.BirthDay ?? user.BirthDay;
