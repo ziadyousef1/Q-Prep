@@ -42,7 +42,7 @@ namespace ProjectAPI.Controllers
 
             if (dto.Photo != null)
             {
-                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo,"TrackPhoto", 800, 50);
+                var compressedImage = await service.CompressAndSaveImageAsync(dto.Photo, "TrackandFrameworkPhoto", 800, 50);
                 UrlPhoto = compressedImage;
             }
 
