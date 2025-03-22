@@ -36,6 +36,7 @@ namespace ProjectAPI.Controllers
 
             var user = users.Select(x => new GetUsersDTO
             {
+                Id = x.Id,
                 Address = x.Address,
                 BirthDay = x.BirthDay,
                 Email = x.Email,
@@ -61,6 +62,7 @@ namespace ProjectAPI.Controllers
 
             var mapUser = new GetUsersDTO
             {
+                Id = user.Id,
                 Address = user.Address,
                 BirthDay = user.BirthDay,
                 Email = user.Email,
@@ -99,6 +101,7 @@ namespace ProjectAPI.Controllers
             await userManager.UpdateAsync(user);
             var mapUser = new GetUsersDTO
             {
+                Id = user.Id,
                 Address = user.Address,
                 BirthDay = user.BirthDay,
                 Email = user.Email,
