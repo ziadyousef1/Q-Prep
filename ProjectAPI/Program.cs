@@ -1,4 +1,4 @@
-
+﻿
 using Core.Interfaces;
 using Core.Model;
 using Core.Servises;
@@ -6,6 +6,7 @@ using Core.Settings;
 using Infrastructure;
 using Infrastructure.Authentication;
 using Infrastructure.UnitOfWork;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -68,6 +69,8 @@ namespace ProjectAPI
                 };
 
             });
+
+            
 
 
             builder.Services.AddControllers();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cqscNDthaporqv4SM+X35POy3j6wsNe7D7qlbfwciGo=",
+  "Hash": "0VQSxiSrFEr9Nwt//UgusjSmC75ZTgt1JwciCQt/ne8=",
   "Source": "ProjectAPI",
   "BasePath": "_content/ProjectAPI",
   "Mode": "Default",
@@ -36,6 +36,25 @@
       "OriginalItemSpec": "wwwroot\\ProfilePhoto\\user-blue-gradient_78370-4692.jpg"
     },
     {
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackandFrameworkPhoto\\12d43941a46441cd9780936d1f0fee11.jpg",
+      "SourceId": "ProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
+      "BasePath": "_content/ProjectAPI",
+      "RelativePath": "TrackandFrameworkPhoto/12d43941a46441cd9780936d1f0fee11.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TrackandFrameworkPhoto\\12d43941a46441cd9780936d1f0fee11.jpg"
+    },
+    {
       "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackandFrameworkPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png",
       "SourceId": "ProjectAPI",
       "SourceType": "Discovered",
@@ -53,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\TrackandFrameworkPhoto\\69c3c85f8aca980abdcfb79fe815dfbb.png"
+    },
+    {
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\TrackandFrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg",
+      "SourceId": "ProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
+      "BasePath": "_content/ProjectAPI",
+      "RelativePath": "TrackandFrameworkPhoto/dark-landscape-mist-moon-wallpaper-preview.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TrackandFrameworkPhoto\\dark-landscape-mist-moon-wallpaper-preview.jpg"
     }
   ]
 }

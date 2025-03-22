@@ -76,7 +76,7 @@ namespace ProjectAPI.Controllers
                 RequestId = Guid.NewGuid().ToString(),
                 UserId = user.Id,
                 Answers = dto.Answers,
-                FrameworkName = dto.FrameworkName,
+                FrameworkId = dto.FrameworkId,
                 Questions = dto.Questions,
                 DateRequest = DateTime.Now,
             };
