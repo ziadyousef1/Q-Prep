@@ -98,7 +98,7 @@ namespace ProjectAPI.Controllers
             if (questionsInRequest == null)
                 return NotFound("This Question Not Found");
 
-            var frameworkid = frameworksUnitOfWork.Entity.Find(x => x.FrameworkName == questionsInRequest.FrameworkName).FrameworkId;
+            //var frameworkid = frameworksUnitOfWork.Entity.Find(x => x.FrameworkName == questionsInRequest.FrameworkName).FrameworkId;
 
 
             if (level.Contains("beginner"))
@@ -106,7 +106,7 @@ namespace ProjectAPI.Controllers
                 var Question = new BeginnerLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid,
+                    FrameworkId = questionsInRequest.FrameworkId,
                     Answers = questionsInRequest.Answers,
                     Questions = questionsInRequest.Questions,
 
@@ -119,7 +119,7 @@ namespace ProjectAPI.Controllers
                 var Question = new IntermediateLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid,
+                    FrameworkId = questionsInRequest.FrameworkId,
                     Answers = questionsInRequest.Answers,
                     Questions = questionsInRequest.Questions,
 
@@ -134,7 +134,7 @@ namespace ProjectAPI.Controllers
                 var Question = new AdvancedLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid,
+                    FrameworkId = questionsInRequest.FrameworkId,
                     Answers = questionsInRequest.Answers,
                     Questions = questionsInRequest.Questions,
 
@@ -161,15 +161,15 @@ namespace ProjectAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var frameworkid = frameworksUnitOfWork.Entity.Find(x=>x.FrameworkName == dto.FrameworkName);
+            //var frameworkid = frameworksUnitOfWork.Entity.Find(x=>x.FrameworkName == dto.FrameworkName);
 
 
-            if (level.Contains("beginner"))
+            if (level.Contains("Beginner"))
             {
                 var Question = new BeginnerLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid.FrameworkId,
+                    FrameworkId = dto.FrameworkId,
                     Answers = dto.Answers,
                     Questions = dto.Questions,
 
@@ -177,12 +177,12 @@ namespace ProjectAPI.Controllers
                 };
                 await beginnerUnitOfWork.Entity.AddAsync(Question);
             }
-            else if (level.Contains("intermediate"))
+            else if (level.Contains("Intermediate"))
             {
                 var Question = new IntermediateLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid.FrameworkId,
+                    FrameworkId = dto.FrameworkId,
                     Answers = dto.Answers,
                     Questions = dto.Questions,
 
@@ -197,7 +197,7 @@ namespace ProjectAPI.Controllers
                 var Question = new AdvancedLevel
                 {
                     QuestionId = Guid.NewGuid().ToString(),
-                    FrameworkId = frameworkid.FrameworkId,
+                    FrameworkId = dto.FrameworkId,
                     Answers = dto.Answers,
                     Questions = dto.Questions,
 

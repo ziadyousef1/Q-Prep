@@ -2,7 +2,7 @@
 {
     public class AddQuestionsDTO
     {
-        public string FrameworkName { get; set; }
+        public string FrameworkId { get; set; }
 
         public string Questions { get; set; }
 
