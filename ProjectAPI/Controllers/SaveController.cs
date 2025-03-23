@@ -17,7 +17,7 @@ namespace ProjectAPI.Controllers
         private readonly IUnitOfWork<SaveQuestions> saveQuestionUnitOfWork;
 
 
-        public SaveController(UserManager<AppUser> userManager , IUnitOfWork<SaveQuestions> saveQuestionUnitOfWork)
+        public SaveController(UserManager<AppUser> userManager , IUnitOfWork<SaveQuestions> saveQuestionUnitOfWork )
         {
             this.userManager = userManager;
             this.saveQuestionUnitOfWork = saveQuestionUnitOfWork;
@@ -56,12 +56,14 @@ namespace ProjectAPI.Controllers
             if (user == null)
                 return NotFound();
 
+            
+
             var valid =await saveQuestionUnitOfWork.Entity.Any(x=>x.UserId == user.Id && dto.Question == x.Question && x.Answer == dto.Answer);
             if (valid)
                 return Ok("The Question is already existing ");
             var Save = new SaveQuestions
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = dto.Id,    
                 Question = dto.Question,
                 Answer = dto.Answer,
                 UserId = user.Id
