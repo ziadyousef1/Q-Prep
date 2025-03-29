@@ -13,10 +13,12 @@ namespace Core.Model
     {
         [Key]
         public string Id { get; set; }
-        [ForeignKey("UserId")]
+
+        public string QueId { get; set; }
         public string Question { get; set; }
 
         public string? Answer { get; set; }
+        [ForeignKey("UserId")]
         public string UserId { get; set; }
         [JsonIgnore]
         public AppUser? User { get; set; }
