@@ -37,6 +37,8 @@ namespace ProjectAPI.Controllers
             var question = Saves.Select(x => new GetSaveQuestionDTO
             {
                 Id = x.Id,
+                questionId = x.QueId,
+                UserId = x.UserId,
                 Question = x.Question,
                 Answer = x.Answer,
             });
@@ -56,14 +58,13 @@ namespace ProjectAPI.Controllers
             if (user == null)
                 return NotFound();
 
-            
-
             var valid =await saveQuestionUnitOfWork.Entity.Any(x=>x.UserId == user.Id && dto.Question == x.Question && x.Answer == dto.Answer);
             if (valid)
                 return Ok("The Question is already existing ");
             var Save = new SaveQuestions
             {
-                Id = dto.Id,    
+                Id = Guid.NewGuid().ToString(),
+                QueId = dto.QuestionId,
                 Question = dto.Question,
                 Answer = dto.Answer,
                 UserId = user.Id
