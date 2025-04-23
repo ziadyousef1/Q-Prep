@@ -42,6 +42,9 @@ namespace Infrastructure
         public DbSet<SaveQuestions> SaveQuestions { get; set; }
         public DbSet<FeedBack> FeedBack { get; set; }
         public DbSet<Recent> Recent { get; set; }
+        public DbSet<Groups> Groups { get; set; }
+        public DbSet<UserGroup> UserGroup { get; set; }
+        public DbSet<Posts> Posts { get; set; }
 
 
 

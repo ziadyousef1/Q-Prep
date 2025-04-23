@@ -9,9 +9,12 @@ using Infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ProjectAPI.Hubs;
 using System;
 using System.Text;
 
@@ -44,9 +47,17 @@ namespace ProjectAPI
 
             builder.Services.AddTransient<IAuthentication, Authentication>();
             builder.Services.AddTransient<Service>();
-
-
-
+             builder.Services.AddCors(options => {
+                options.AddPolicy("AllowAll", builder => {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+            builder.Services.AddSignalR().AddHubOptions<CommunityHub>(options => {
+                options.EnableDetailedErrors = true; // عرض أخطاء 0مفصلة
+            });
+            builder.Services.AddSingleton<IUserIdProvider,customId >();
 
             builder.Services.AddAuthentication(options =>
             {
@@ -67,15 +78,24 @@ namespace ProjectAPI
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:Key"]))
 
                 };
-
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/communityHub"))
+                        {
+                            
+                            context.Token = accessToken;
+                        }
+                       
+                        return Task.CompletedTask;
+                    }
+                };
             });
-
-            
-
-
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddCors();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
@@ -108,19 +128,16 @@ namespace ProjectAPI
                 });
 
             });
-
             var app = builder.Build();
             app.UseStaticFiles();
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseHttpsRedirection();
-            app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
-
-
+            app.MapHub<CommunityHub>("/communityHub"); 
             app.MapControllers();
-
             app.Run();
         }
     }

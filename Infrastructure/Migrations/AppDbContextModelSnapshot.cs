@@ -41,7 +41,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("FrameworkId");
 
-                    b.ToTable("AdvancedLevel");
+                    b.ToTable("AdvancedLevel", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.AppUser", b =>
@@ -145,7 +145,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("FrameworkId");
 
-                    b.ToTable("BeginnerLevel");
+                    b.ToTable("BeginnerLevel", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.FeedBack", b =>
@@ -168,7 +168,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("AppUserId");
 
-                    b.ToTable("FeedBack");
+                    b.ToTable("FeedBack", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.Frameworks", b =>
@@ -192,7 +192,30 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MainTrackId");
 
-                    b.ToTable("Framworks");
+                    b.ToTable("Framworks", (string)null);
+                });
+
+            modelBuilder.Entity("Core.Model.Groups", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberOfMembers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Groups", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.IntermediateLevel", b =>
@@ -214,7 +237,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("FrameworkId");
 
-                    b.ToTable("IntermediateLevel");
+                    b.ToTable("IntermediateLevel", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.MainTrack", b =>
@@ -233,7 +256,41 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("TrackId");
 
-                    b.ToTable("MainTrack");
+                    b.ToTable("MainTrack", (string)null);
+                });
+
+            modelBuilder.Entity("Core.Model.Posts", b =>
+                {
+                    b.Property<string>("PostId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeOfBody")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("groupId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("header")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("likes")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("postDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PostId");
+
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.Recent", b =>
@@ -258,7 +315,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Recent");
+                    b.ToTable("Recent", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.RequestQuestions", b =>
@@ -288,7 +345,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RequestQuestions");
+                    b.ToTable("RequestQuestions", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.SaveQuestions", b =>
@@ -315,7 +372,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("SaveQuestions");
+                    b.ToTable("SaveQuestions", (string)null);
                 });
 
             modelBuilder.Entity("Core.Model.Test", b =>
@@ -348,7 +405,25 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Q_Id");
 
-                    b.ToTable("Test");
+                    b.ToTable("Test", (string)null);
+                });
+
+            modelBuilder.Entity("Core.Model.UserGroup", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserGroup", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -497,7 +572,7 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Core.Model.AppUser", b =>
                 {
-                    b.OwnsMany("Core.Model.RefreshToken", "RefreshTokens", b1 =>
+                    b.OwnsMany("Core.Model.AppUser.RefreshTokens#Core.Model.RefreshToken", "RefreshTokens", b1 =>
                         {
                             b1.Property<string>("AppUserId")
                                 .HasColumnType("nvarchar(450)");
