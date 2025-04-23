@@ -45,7 +45,7 @@ namespace ProjectAPI.Controllers
             return Ok(feedback);
         }
         [HttpPost("AddMessage")]
-        //[Authorize("UserRole")]
+        [Authorize("UserRole")]
         public async Task<IActionResult> AddMessage(AddMessageDTO dto)
         {
             if(!ModelState.IsValid)
