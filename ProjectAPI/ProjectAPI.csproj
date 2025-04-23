@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\GroupsPhoto\" />
     <Folder Include="wwwroot\PostPhotos\" />
     <Folder Include="wwwroot\TrackandFrameworkPhoto\" />
   </ItemGroup>
