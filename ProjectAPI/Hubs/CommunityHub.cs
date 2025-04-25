@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ProjectAPI.Hubs
 {
-   
+
     public class CommunityHub : Hub
     {
         private readonly IUnitOfWork<UserGroup> userGroupUnitOfWork;
@@ -18,19 +18,18 @@ namespace ProjectAPI.Hubs
         }
         public override async Task OnConnectedAsync()
         {
-                var userId = Context.UserIdentifier;
-                var groups = await userGroupUnitOfWork.Entity
-                    .FindAll(x => x.UserID == userId);
+            var userId = Context.UserIdentifier;
+            var groups = await userGroupUnitOfWork.Entity
+                .FindAll(x => x.UserID == userId);
 
-                foreach (var group in groups)
-                {
-                    await Groups.AddToGroupAsync(Context.ConnectionId, group.GroupName);
-                }
-                
+            foreach (var group in groups)
+            {
+                await Groups.AddToGroupAsync(Context.ConnectionId, group.GroupName);
+            }
+
             await base.OnConnectedAsync();
 
         }
-
         public string GetConnectionId()
         {
             return Context.ConnectionId;
@@ -51,10 +50,10 @@ namespace ProjectAPI.Hubs
 
 
 
-        
+
 
 
 
     }
-    
+
 }
