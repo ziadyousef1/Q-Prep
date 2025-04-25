@@ -36,7 +36,7 @@ namespace ProjectAPI.Controllers
 
 
         [HttpGet("GetGroupById/{id}")]
-        [Authorize("AdminRole")]
+        [Authorize("UserRole")]
         public async Task<IActionResult> GetGroupById(string id)
         {
             if (string.IsNullOrEmpty(id))
