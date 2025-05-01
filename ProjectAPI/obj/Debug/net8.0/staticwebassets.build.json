@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FPbsxnVQFzv0C5CxecM+cmQQfwgsvOf3YmtRNX3eWcY=",
+  "Hash": "9X+f1jAj2MsRUu9VPklfiBExrQi9HhcYjZBUhbLc4zs=",
   "Source": "ProjectAPI",
   "BasePath": "_content/ProjectAPI",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\GroupsPhoto\\12d43941a46441cd9780936d1f0fee11.jpg",
+      "SourceId": "ProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
+      "BasePath": "_content/ProjectAPI",
+      "RelativePath": "GroupsPhoto/12d43941a46441cd9780936d1f0fee11#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vecn3ia992",
+      "Integrity": "aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\GroupsPhoto\\12d43941a46441cd9780936d1f0fee11.jpg"
+    },
     {
       "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\htmlpage.html",
       "SourceId": "ProjectAPI",
@@ -57,27 +78,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JavaScript.js"
-    },
-    {
-      "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\PostPhotos\\12d43941a46441cd9780936d1f0fee11.jpg",
-      "SourceId": "ProjectAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\",
-      "BasePath": "_content/ProjectAPI",
-      "RelativePath": "PostPhotos/12d43941a46441cd9780936d1f0fee11#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "vecn3ia992",
-      "Integrity": "aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\PostPhotos\\12d43941a46441cd9780936d1f0fee11.jpg"
     },
     {
       "Identity": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\PostPhotos\\4bc011b9161fb6544cfef43b0b5ee421.jpg",
@@ -186,6 +186,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "GroupsPhoto/12d43941a46441cd9780936d1f0fee11.jpg",
+      "AssetFile": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\GroupsPhoto\\12d43941a46441cd9780936d1f0fee11.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24005"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 01:19:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI="
+        }
+      ]
+    },
+    {
+      "Route": "GroupsPhoto/12d43941a46441cd9780936d1f0fee11.vecn3ia992.jpg",
+      "AssetFile": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\GroupsPhoto\\12d43941a46441cd9780936d1f0fee11.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24005"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 01:19:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vecn3ia992"
+        },
+        {
+          "Name": "label",
+          "Value": "GroupsPhoto/12d43941a46441cd9780936d1f0fee11.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI="
+        }
+      ]
+    },
     {
       "Route": "htmlpage.html",
       "AssetFile": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\htmlpage.html",
@@ -347,88 +429,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-9L5+72aL+l2eIRxKgKE838bRN9Gm0vcTApwoqpg5+4c="
-        }
-      ]
-    },
-    {
-      "Route": "PostPhotos/12d43941a46441cd9780936d1f0fee11.jpg",
-      "AssetFile": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\PostPhotos\\12d43941a46441cd9780936d1f0fee11.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24005"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 01:19:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI="
-        }
-      ]
-    },
-    {
-      "Route": "PostPhotos/12d43941a46441cd9780936d1f0fee11.vecn3ia992.jpg",
-      "AssetFile": "D:\\Projects Of C#\\Q-Prep\\ProjectAPI\\wwwroot\\PostPhotos\\12d43941a46441cd9780936d1f0fee11.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24005"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 01:19:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vecn3ia992"
-        },
-        {
-          "Name": "label",
-          "Value": "PostPhotos/12d43941a46441cd9780936d1f0fee11.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-aRYrwPTLV9r1TJUcvJBFgKwzj+zPmVLg8tLLjsVXtJI="
         }
       ]
     },

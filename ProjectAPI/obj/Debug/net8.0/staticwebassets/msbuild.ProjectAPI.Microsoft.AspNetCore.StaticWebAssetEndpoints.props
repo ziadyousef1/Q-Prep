@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ProjectAPI/GroupsPhoto/12d43941a46441cd9780936d1f0fee11.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\GroupsPhoto\12d43941a46441cd9780936d1f0fee11.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"24005"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 01:19:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjectAPI/GroupsPhoto/12d43941a46441cd9780936d1f0fee11.vecn3ia992.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\GroupsPhoto\12d43941a46441cd9780936d1f0fee11.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vecn3ia992"},{"Name":"integrity","Value":"sha256-aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI="},{"Name":"label","Value":"_content/ProjectAPI/GroupsPhoto/12d43941a46441cd9780936d1f0fee11.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24005"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 01:19:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ProjectAPI/htmlpage.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\htmlpage.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -23,18 +35,6 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wzoejixd60"},{"Name":"integrity","Value":"sha256-9L5\u002B72aL\u002Bl2eIRxKgKE838bRN9Gm0vcTApwoqpg5\u002B4c="},{"Name":"label","Value":"_content/ProjectAPI/JavaScript.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3001"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00229L5\u002B72aL\u002Bl2eIRxKgKE838bRN9Gm0vcTApwoqpg5\u002B4c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 23:05:18 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ProjectAPI/PostPhotos/12d43941a46441cd9780936d1f0fee11.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\PostPhotos\12d43941a46441cd9780936d1f0fee11.jpg'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"24005"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 01:19:44 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ProjectAPI/PostPhotos/12d43941a46441cd9780936d1f0fee11.vecn3ia992.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\PostPhotos\12d43941a46441cd9780936d1f0fee11.jpg'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vecn3ia992"},{"Name":"integrity","Value":"sha256-aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI="},{"Name":"label","Value":"_content/ProjectAPI/PostPhotos/12d43941a46441cd9780936d1f0fee11.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24005"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aRYrwPTLV9r1TJUcvJBFgKwzj\u002BzPmVLg8tLLjsVXtJI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 01:19:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ProjectAPI/PostPhotos/4bc011b9161fb6544cfef43b0b5ee421.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\PostPhotos\4bc011b9161fb6544cfef43b0b5ee421.jpg'))</AssetFile>
