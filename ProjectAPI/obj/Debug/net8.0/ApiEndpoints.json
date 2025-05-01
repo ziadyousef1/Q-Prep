@@ -437,6 +437,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProjectAPI.Controllers.LikesController",
+    "Method": "AddLike",
+    "RelativePath": "api/Likes/AddLike/{postId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectAPI.Controllers.LikesController",
+    "Method": "RemoveLike",
+    "RelativePath": "api/Likes/RemoveLike/{postId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProjectAPI.Controllers.MainTrackController",
     "Method": "AddMainTrack",
     "RelativePath": "api/MainTrack/AddMainTrack",

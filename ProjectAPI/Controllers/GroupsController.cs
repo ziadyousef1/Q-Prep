@@ -114,8 +114,8 @@ namespace ProjectAPI.Controllers
             return Ok(group);
         }
 
-        [Authorize("AdminRole")]
         [HttpDelete("DeleteGroup/{id}")]
+        [Authorize("AdminRole")]
         public async Task< IActionResult> DeleteGroup(string id)
         {
             if (string.IsNullOrEmpty(id))
